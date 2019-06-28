@@ -1,0 +1,75 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="padding-left:3em; padding-right:3em" href="#"><i class="fa fa-map-signs" aria-hidden="true"></i>    Duzz!</a>
+      </div> 
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav" style="padding-right:5em">
+          <li [ngClass]="{'active': isActive, 'disabled': isDisabled}"><a href="#" routerLink="/"> <i class="fa fa-home"></i> Inicio </a></li>
+          <li [ngClass]="{'active': isActive, 'disabled': isDisabled}"><a href="#" routerLink="/lugares"><i class="fa fa-map-pin"></i> Lugares</a></li>          
+          <li [ngClass]="{'active': isActive, 'disabled': isDisabled}"><a href="#" routerLink="/eventos"><i class="fa fa-calendar-o"></i> Eventos</a></li>          
+          <li [ngClass]="{'active': isActive, 'disabled': isDisabled}"><a href="#" routerLink="/mapa"><i class="fa fa-map-o"></i> Mapa</a></li>          
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Busca restaurantes, bares y antros" size="50px">
+            </div>
+            <!--<button type="submit" class="btn btn-default">Buscar</button>-->
+          </form>
+        <ul class="nav navbar-nav navbar-right">          
+          <li *ngIf="user"><a href="#"> {{ user.name }} </a></li>
+          <li *ngIf="user" style="padding-top:5px">              
+              <img src="{{ user.photoUrl }}" class="img-responsive img-circle" alt="Facebook Profile" width="50" height="50"> 
+          </li>
+          <li *ngIf="!user">            
+            <a href="#" class="btn btn-success" (click)="signInWithFB()"><i class="fa fa-facebook"></i>&nbsp;&nbsp;&nbsp; Entrar con Facebook</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#"><i class="fa fa-map-signs" aria-hidden="true"></i>    Duzz!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+        <a class="nav-link" routerLink="/inicio">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+        <a class="nav-link" routerLink="/lugares">Lugares</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+        <a class="nav-link" routerLink="/eventos">Eventos</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+        <a class="nav-link" routerLink="/mapa">Mapa</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+        <a class="nav-link" routerLink="/acerca">Acerca de </a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" size="35px" placeholder="Restaurantes, bares, antros">
+      <button class="btn btn-danger my-2 my-sm-0 buscar" type="submit">Buscar</button>
+    </form>
+    <span  *ngIf="user">
+      <img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+      <h4 class="card-title">{{ user.name }}</h4>
+      <p class="card-text">{{ user.email }}</p>
+    </span>
+    <span  *ngIf="!user">
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+    </span>
+
+  </div>
+</nav>-->

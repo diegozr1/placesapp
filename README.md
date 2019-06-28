@@ -16,6 +16,7 @@ Eventos
 
 - https://www.meetup.com/es-ES/meetup_api/
 - https://www.eventbrite.es/developer/v3/
+- https://developer.ticketmaster.com/ 
 
 Lugares
 
@@ -36,6 +37,7 @@ Trafico
 Social
 
 - https://www.instagram.com/developer/endpoints/locations/
+- https://developers.facebook.com/docs/places/web
 - https://github.com/tobilg/facebook-events-by-location
 - https://developers.facebook.com/docs/graph-api/reference/user/events/
 - https://developers.facebook.com/docs/graph-api/reference/place-topic/
